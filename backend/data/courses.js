@@ -1,0 +1,418 @@
+// Broad course catalog spanning 12+ domains
+// Used as context/reference for the AI and for browsing
+
+export const courses = [
+  // ──────────────── WEB DEVELOPMENT ────────────────
+  {
+    id: 'wd-001', title: 'The Complete Web Developer Bootcamp', domain: 'Web Development',
+    level: 'beginner', duration: '65 hours', provider: 'Udemy',
+    skills: ['HTML', 'CSS', 'JavaScript', 'Node.js', 'MongoDB', 'React'],
+    prerequisites: [], rating: 4.8,
+    url: 'https://www.udemy.com/course/the-complete-web-development-bootcamp/',
+    description: 'Complete full-stack web development course from scratch',
+  },
+  {
+    id: 'wd-002', title: 'The Odin Project – Full Stack Path', domain: 'Web Development',
+    level: 'beginner', duration: '1000+ hours', provider: 'The Odin Project',
+    skills: ['HTML', 'CSS', 'JavaScript', 'Ruby', 'Rails', 'React'],
+    prerequisites: [], rating: 4.9,
+    url: 'https://www.theodinproject.com/',
+    description: 'Free open-source full-stack curriculum with real projects',
+  },
+  {
+    id: 'wd-003', title: 'Full Stack Open', domain: 'Web Development',
+    level: 'intermediate', duration: '200+ hours', provider: 'University of Helsinki',
+    skills: ['React', 'Node.js', 'MongoDB', 'GraphQL', 'TypeScript', 'Testing'],
+    prerequisites: ['JavaScript basics'],
+    url: 'https://fullstackopen.com/', rating: 4.9,
+    description: 'Deep dive into modern full-stack development — free from University of Helsinki',
+  },
+  {
+    id: 'wd-004', title: 'JavaScript Algorithms and Data Structures', domain: 'Web Development',
+    level: 'intermediate', duration: '300 hours', provider: 'freeCodeCamp',
+    skills: ['JavaScript', 'Algorithms', 'Data Structures'],
+    prerequisites: ['HTML/CSS basics'],
+    url: 'https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/', rating: 4.7,
+    description: 'Comprehensive JS curriculum with certifications',
+  },
+  {
+    id: 'wd-005', title: 'React – The Complete Guide', domain: 'Web Development',
+    level: 'intermediate', duration: '48 hours', provider: 'Udemy',
+    skills: ['React', 'Redux', 'React Hooks', 'Next.js'],
+    prerequisites: ['JavaScript'],
+    url: 'https://www.udemy.com/course/react-the-complete-guide-incl-redux/', rating: 4.8,
+    description: 'Master React from basics to advanced patterns',
+  },
+  {
+    id: 'wd-006', title: 'CS50 Web Programming with Python and JavaScript', domain: 'Web Development',
+    level: 'intermediate', duration: '80 hours', provider: 'Harvard / edX',
+    skills: ['Python', 'JavaScript', 'Django', 'SQL', 'Git'],
+    prerequisites: ['CS50x or programming basics'],
+    url: 'https://cs50.harvard.edu/web/', rating: 4.9,
+    description: "Harvard's web programming course — free and world-class",
+  },
+
+  // ──────────────── DATA SCIENCE ────────────────
+  {
+    id: 'ds-001', title: 'IBM Data Science Professional Certificate', domain: 'Data Science',
+    level: 'beginner', duration: '160 hours', provider: 'Coursera / IBM',
+    skills: ['Python', 'SQL', 'Pandas', 'NumPy', 'Data Visualization', 'Machine Learning'],
+    prerequisites: [],
+    url: 'https://www.coursera.org/professional-certificates/ibm-data-science', rating: 4.6,
+    description: '10-course series covering the full data science workflow',
+  },
+  {
+    id: 'ds-002', title: 'Python for Data Science and AI', domain: 'Data Science',
+    level: 'beginner', duration: '25 hours', provider: 'Coursera / IBM',
+    skills: ['Python', 'Pandas', 'NumPy', 'Jupyter'],
+    prerequisites: [],
+    url: 'https://www.coursera.org/learn/python-for-applied-data-science-ai', rating: 4.5,
+    description: 'Foundation Python skills for data work',
+  },
+  {
+    id: 'ds-003', title: 'Data Analysis with Python', domain: 'Data Science',
+    level: 'intermediate', duration: '300 hours', provider: 'freeCodeCamp',
+    skills: ['Python', 'NumPy', 'Pandas', 'Matplotlib', 'Seaborn'],
+    prerequisites: ['Python basics'],
+    url: 'https://www.freecodecamp.org/learn/data-analysis-with-python/', rating: 4.7,
+    description: 'Data analysis certification with 5 real projects',
+  },
+  {
+    id: 'ds-004', title: 'Statistics with Python Specialization', domain: 'Data Science',
+    level: 'intermediate', duration: '120 hours', provider: 'Coursera / U of Michigan',
+    skills: ['Statistics', 'Python', 'Bayesian Methods', 'Inference'],
+    prerequisites: ['Python basics'],
+    url: 'https://www.coursera.org/specializations/statistics-with-python', rating: 4.5,
+    description: 'Statistical thinking for data scientists',
+  },
+  {
+    id: 'ds-005', title: 'Google Data Analytics Certificate', domain: 'Data Science',
+    level: 'beginner', duration: '180 hours', provider: 'Coursera / Google',
+    skills: ['SQL', 'R', 'Tableau', 'Data Cleaning', 'Visualization'],
+    prerequisites: [],
+    url: 'https://www.coursera.org/professional-certificates/google-data-analytics', rating: 4.8,
+    description: 'Employer-recognized certificate from Google',
+  },
+
+  // ──────────────── MACHINE LEARNING & AI ────────────────
+  {
+    id: 'ml-001', title: 'Machine Learning Specialization', domain: 'Machine Learning & AI',
+    level: 'intermediate', duration: '100 hours', provider: 'Coursera / DeepLearning.AI',
+    skills: ['Python', 'Supervised Learning', 'Unsupervised Learning', 'Reinforcement Learning'],
+    prerequisites: ['Python', 'Basic math'],
+    url: 'https://www.coursera.org/specializations/machine-learning-introduction', rating: 4.9,
+    description: 'Andrew Ng\'s updated ML course — the gold standard',
+  },
+  {
+    id: 'ml-002', title: 'Deep Learning Specialization', domain: 'Machine Learning & AI',
+    level: 'advanced', duration: '130 hours', provider: 'Coursera / DeepLearning.AI',
+    skills: ['Neural Networks', 'CNN', 'RNN', 'TensorFlow', 'NLP'],
+    prerequisites: ['Machine Learning basics', 'Python', 'Linear Algebra'],
+    url: 'https://www.coursera.org/specializations/deep-learning', rating: 4.9,
+    description: '5-course deep learning specialization by Andrew Ng',
+  },
+  {
+    id: 'ml-003', title: 'Practical Deep Learning for Coders', domain: 'Machine Learning & AI',
+    level: 'intermediate', duration: '80 hours', provider: 'fast.ai',
+    skills: ['PyTorch', 'Deep Learning', 'Computer Vision', 'NLP'],
+    prerequisites: ['Python', 'Some ML exposure'],
+    url: 'https://course.fast.ai/', rating: 4.9,
+    description: 'Top-down, code-first approach to deep learning — free',
+  },
+  {
+    id: 'ml-004', title: 'CS50\'s Introduction to Artificial Intelligence', domain: 'Machine Learning & AI',
+    level: 'intermediate', duration: '40 hours', provider: 'Harvard / edX',
+    skills: ['AI algorithms', 'Search', 'Optimization', 'Machine Learning', 'Neural Networks'],
+    prerequisites: ['Python', 'Basic probability'],
+    url: 'https://cs50.harvard.edu/ai/', rating: 4.9,
+    description: "Harvard's AI course — covers classical and modern AI",
+  },
+  {
+    id: 'ml-005', title: 'Natural Language Processing Specialization', domain: 'Machine Learning & AI',
+    level: 'advanced', duration: '120 hours', provider: 'Coursera / DeepLearning.AI',
+    skills: ['NLP', 'Transformers', 'Attention Mechanism', 'Word Embeddings'],
+    prerequisites: ['Deep Learning basics', 'Python'],
+    url: 'https://www.coursera.org/specializations/natural-language-processing', rating: 4.7,
+    description: 'State-of-the-art NLP techniques and applications',
+  },
+
+  // ──────────────── CLOUD & DEVOPS ────────────────
+  {
+    id: 'cloud-001', title: 'AWS Cloud Practitioner Essentials', domain: 'Cloud & DevOps',
+    level: 'beginner', duration: '15 hours', provider: 'AWS Training',
+    skills: ['AWS', 'Cloud Computing', 'EC2', 'S3', 'IAM'],
+    prerequisites: [],
+    url: 'https://aws.amazon.com/training/digital/aws-cloud-practitioner-essentials/', rating: 4.6,
+    description: 'Official AWS intro — foundation for the CLF-C02 certification',
+  },
+  {
+    id: 'cloud-002', title: 'Google Cloud Associate Cloud Engineer', domain: 'Cloud & DevOps',
+    level: 'intermediate', duration: '120 hours', provider: 'Coursera / Google',
+    skills: ['GCP', 'Kubernetes', 'Compute Engine', 'Cloud Storage', 'Networking'],
+    prerequisites: ['Networking basics', 'Linux'],
+    url: 'https://www.coursera.org/professional-certificates/cloud-engineering-gcp', rating: 4.7,
+    description: 'Prepare for the Google Cloud ACE certification',
+  },
+  {
+    id: 'cloud-003', title: 'Docker and Kubernetes: The Complete Guide', domain: 'Cloud & DevOps',
+    level: 'intermediate', duration: '22 hours', provider: 'Udemy',
+    skills: ['Docker', 'Kubernetes', 'CI/CD', 'Microservices'],
+    prerequisites: ['Linux basics', 'Web development basics'],
+    url: 'https://www.udemy.com/course/docker-and-kubernetes-the-complete-guide/', rating: 4.7,
+    description: 'Master container orchestration for production systems',
+  },
+  {
+    id: 'cloud-004', title: 'The Git & GitHub Bootcamp', domain: 'Cloud & DevOps',
+    level: 'beginner', duration: '17 hours', provider: 'Udemy',
+    skills: ['Git', 'GitHub', 'Version Control', 'Collaboration'],
+    prerequisites: [],
+    url: 'https://www.udemy.com/course/git-and-github-bootcamp/', rating: 4.8,
+    description: 'Master version control from basics to advanced workflows',
+  },
+
+  // ──────────────── MOBILE DEVELOPMENT ────────────────
+  {
+    id: 'mob-001', title: 'React Native – The Practical Guide', domain: 'Mobile Development',
+    level: 'intermediate', duration: '38 hours', provider: 'Udemy',
+    skills: ['React Native', 'JavaScript', 'iOS', 'Android', 'Expo'],
+    prerequisites: ['React', 'JavaScript'],
+    url: 'https://www.udemy.com/course/react-native-the-practical-guide/', rating: 4.7,
+    description: 'Build cross-platform mobile apps with React Native',
+  },
+  {
+    id: 'mob-002', title: 'Flutter & Dart – The Complete Guide', domain: 'Mobile Development',
+    level: 'beginner', duration: '42 hours', provider: 'Udemy',
+    skills: ['Flutter', 'Dart', 'iOS', 'Android', 'Firebase'],
+    prerequisites: [],
+    url: 'https://www.udemy.com/course/learn-flutter-dart-to-build-ios-android-apps/', rating: 4.6,
+    description: 'Build beautiful native apps with Flutter',
+  },
+  {
+    id: 'mob-003', title: 'iOS & Swift – The Complete App Bootcamp', domain: 'Mobile Development',
+    level: 'beginner', duration: '55 hours', provider: 'Udemy',
+    skills: ['Swift', 'SwiftUI', 'iOS', 'Xcode', 'UIKit'],
+    prerequisites: [],
+    url: 'https://www.udemy.com/course/ios-13-app-development-bootcamp/', rating: 4.8,
+    description: 'Complete iOS development with Dr. Angela Yu',
+  },
+
+  // ──────────────── UI/UX DESIGN ────────────────
+  {
+    id: 'ux-001', title: 'Google UX Design Professional Certificate', domain: 'UI/UX Design',
+    level: 'beginner', duration: '200 hours', provider: 'Coursera / Google',
+    skills: ['UX Research', 'Wireframing', 'Prototyping', 'Figma', 'Usability Testing'],
+    prerequisites: [],
+    url: 'https://www.coursera.org/professional-certificates/google-ux-design', rating: 4.8,
+    description: 'Google\'s 7-course UX certificate — highly job-ready',
+  },
+  {
+    id: 'ux-002', title: 'UI Design Fundamentals', domain: 'UI/UX Design',
+    level: 'beginner', duration: '20 hours', provider: 'Scrimba',
+    skills: ['Visual Design', 'Typography', 'Color Theory', 'Layout'],
+    prerequisites: [],
+    url: 'https://scrimba.com/learn/design', rating: 4.6,
+    description: 'Interactive UI design fundamentals course',
+  },
+  {
+    id: 'ux-003', title: 'Figma UI UX Design Essentials', domain: 'UI/UX Design',
+    level: 'beginner', duration: '15 hours', provider: 'Udemy',
+    skills: ['Figma', 'Prototyping', 'Auto Layout', 'Components'],
+    prerequisites: [],
+    url: 'https://www.udemy.com/course/figma-ux-ui-design-user-experience-tutorial-course/', rating: 4.7,
+    description: 'Master Figma for professional UI/UX design',
+  },
+
+  // ──────────────── CYBERSECURITY ────────────────
+  {
+    id: 'sec-001', title: 'Google Cybersecurity Professional Certificate', domain: 'Cybersecurity',
+    level: 'beginner', duration: '180 hours', provider: 'Coursera / Google',
+    skills: ['Network Security', 'Linux', 'SQL', 'SIEM', 'Python Scripting'],
+    prerequisites: [],
+    url: 'https://www.coursera.org/professional-certificates/google-cybersecurity', rating: 4.8,
+    description: 'Entry-level cybersecurity certification from Google',
+  },
+  {
+    id: 'sec-002', title: 'The Complete Cyber Security Course – Hackers Exposed', domain: 'Cybersecurity',
+    level: 'beginner', duration: '17 hours', provider: 'Udemy',
+    skills: ['Threat Landscape', 'Malware', 'Network Security', 'Encryption'],
+    prerequisites: [],
+    url: 'https://www.udemy.com/course/the-complete-internet-security-privacy-course-volume-1/', rating: 4.6,
+    description: 'Comprehensive introduction to cybersecurity',
+  },
+  {
+    id: 'sec-003', title: 'TryHackMe – Pre-Security Path', domain: 'Cybersecurity',
+    level: 'beginner', duration: '40 hours', provider: 'TryHackMe',
+    skills: ['Networking', 'Linux', 'Web Fundamentals', 'Windows'],
+    prerequisites: [],
+    url: 'https://tryhackme.com/path/outline/presecurity', rating: 4.9,
+    description: 'Hands-on cybersecurity learning with gamified labs',
+  },
+  {
+    id: 'sec-004', title: 'Ethical Hacking Bootcamp', domain: 'Cybersecurity',
+    level: 'intermediate', duration: '30 hours', provider: 'Udemy',
+    skills: ['Penetration Testing', 'Kali Linux', 'Metasploit', 'Nmap'],
+    prerequisites: ['Networking basics', 'Linux basics'],
+    url: 'https://www.udemy.com/course/learn-ethical-hacking-from-scratch/', rating: 4.6,
+    description: 'Learn penetration testing legally and ethically',
+  },
+
+  // ──────────────── DATABASE MANAGEMENT ────────────────
+  {
+    id: 'db-001', title: 'SQL for Data Science', domain: 'Databases',
+    level: 'beginner', duration: '30 hours', provider: 'Coursera / UC Davis',
+    skills: ['SQL', 'Data Analysis', 'SQLite'],
+    prerequisites: [],
+    url: 'https://www.coursera.org/learn/sql-for-data-science', rating: 4.5,
+    description: 'SQL fundamentals for data analysis',
+  },
+  {
+    id: 'db-002', title: 'The Complete SQL Bootcamp', domain: 'Databases',
+    level: 'beginner', duration: '9 hours', provider: 'Udemy',
+    skills: ['PostgreSQL', 'SQL', 'Database Design'],
+    prerequisites: [],
+    url: 'https://www.udemy.com/course/the-complete-sql-bootcamp/', rating: 4.7,
+    description: 'Master SQL with PostgreSQL',
+  },
+  {
+    id: 'db-003', title: 'MongoDB – The Complete Developer\'s Guide', domain: 'Databases',
+    level: 'intermediate', duration: '17 hours', provider: 'Udemy',
+    skills: ['MongoDB', 'NoSQL', 'Mongoose', 'Aggregation'],
+    prerequisites: ['JavaScript basics'],
+    url: 'https://www.udemy.com/course/mongodb-the-complete-developers-guide/', rating: 4.7,
+    description: 'Master MongoDB from beginner to advanced',
+  },
+
+  // ──────────────── PYTHON PROGRAMMING ────────────────
+  {
+    id: 'py-001', title: 'CS50\'s Introduction to Programming with Python', domain: 'Programming',
+    level: 'beginner', duration: '30 hours', provider: 'Harvard / edX',
+    skills: ['Python', 'Functions', 'OOP', 'File I/O', 'Testing'],
+    prerequisites: [],
+    url: 'https://cs50.harvard.edu/python/', rating: 4.9,
+    description: 'Harvard\'s Python course — rigorous and free',
+  },
+  {
+    id: 'py-002', title: '100 Days of Code: Python Bootcamp', domain: 'Programming',
+    level: 'beginner', duration: '60 hours', provider: 'Udemy',
+    skills: ['Python', 'Web Scraping', 'Automation', 'Flask', 'APIs'],
+    prerequisites: [],
+    url: 'https://www.udemy.com/course/100-days-of-code/', rating: 4.7,
+    description: '100 projects in 100 days — most comprehensive Python course',
+  },
+  {
+    id: 'py-003', title: 'Automate the Boring Stuff with Python', domain: 'Programming',
+    level: 'beginner', duration: '20 hours', provider: 'Udemy / Free online',
+    skills: ['Python', 'Automation', 'Regex', 'Excel', 'PDF handling'],
+    prerequisites: ['Python basics'],
+    url: 'https://automatetheboringstuff.com/', rating: 4.8,
+    description: 'Practical Python automation — book is free online',
+  },
+
+  // ──────────────── ALGORITHMS & CS FUNDAMENTALS ────────────────
+  {
+    id: 'cs-001', title: 'CS50\'s Introduction to Computer Science', domain: 'CS Fundamentals',
+    level: 'beginner', duration: '100 hours', provider: 'Harvard / edX',
+    skills: ['C', 'Python', 'Algorithms', 'Data Structures', 'SQL', 'Web basics'],
+    prerequisites: [],
+    url: 'https://cs50.harvard.edu/x/', rating: 4.9,
+    description: 'The best intro to CS in the world — free from Harvard',
+  },
+  {
+    id: 'cs-002', title: 'Algorithms Specialization', domain: 'CS Fundamentals',
+    level: 'advanced', duration: '80 hours', provider: 'Coursera / Stanford',
+    skills: ['Algorithms', 'Divide & Conquer', 'Dynamic Programming', 'Graph Algorithms'],
+    prerequisites: ['Data Structures', 'Programming proficiency'],
+    url: 'https://www.coursera.org/specializations/algorithms', rating: 4.8,
+    description: 'Tim Roughgarden\'s legendary algorithm course',
+  },
+  {
+    id: 'cs-003', title: 'Data Structures and Algorithms in JavaScript', domain: 'CS Fundamentals',
+    level: 'intermediate', duration: '22 hours', provider: 'Udemy',
+    skills: ['JavaScript', 'Arrays', 'Linked Lists', 'Trees', 'Graphs', 'Dynamic Programming'],
+    prerequisites: ['JavaScript basics'],
+    url: 'https://www.udemy.com/course/js-algorithms-and-data-structures-masterclass/', rating: 4.8,
+    description: 'Master DSA for coding interviews',
+  },
+
+  // ──────────────── BUSINESS & PRODUCT MANAGEMENT ────────────────
+  {
+    id: 'biz-001', title: 'Digital Marketing Specialization', domain: 'Business & Marketing',
+    level: 'beginner', duration: '120 hours', provider: 'Coursera / University of Illinois',
+    skills: ['SEO', 'Social Media', 'Analytics', 'Content Marketing', 'Email Marketing'],
+    prerequisites: [],
+    url: 'https://www.coursera.org/specializations/digital-marketing', rating: 4.5,
+    description: '7-course digital marketing specialization',
+  },
+  {
+    id: 'biz-002', title: 'Product Management Fundamentals', domain: 'Business & Marketing',
+    level: 'beginner', duration: '40 hours', provider: 'Coursera / Duke University',
+    skills: ['Product Strategy', 'Roadmaps', 'User Stories', 'Agile', 'Metrics'],
+    prerequisites: [],
+    url: 'https://www.coursera.org/learn/product-management', rating: 4.5,
+    description: 'Core skills for aspiring product managers',
+  },
+  {
+    id: 'biz-003', title: 'Financial Markets', domain: 'Business & Marketing',
+    level: 'beginner', duration: '33 hours', provider: 'Coursera / Yale',
+    skills: ['Finance', 'Risk Management', 'Portfolio Theory', 'Behavioral Finance'],
+    prerequisites: [],
+    url: 'https://www.coursera.org/learn/financial-markets-global', rating: 4.8,
+    description: 'Nobel laureate Robert Shiller\'s finance course — free',
+  },
+
+  // ──────────────── GAME DEVELOPMENT ────────────────
+  {
+    id: 'game-001', title: 'Complete C# Unity Game Developer 3D', domain: 'Game Development',
+    level: 'beginner', duration: '30 hours', provider: 'Udemy',
+    skills: ['C#', 'Unity 3D', 'Game Design', 'Physics', 'Animation'],
+    prerequisites: [],
+    url: 'https://www.udemy.com/course/unitycourse2/', rating: 4.7,
+    description: 'Build 10 games in Unity — beginner to professional',
+  },
+  {
+    id: 'game-002', title: 'Godot Game Development – Beginner to Advanced', domain: 'Game Development',
+    level: 'beginner', duration: '20 hours', provider: 'Udemy',
+    skills: ['Godot', 'GDScript', '2D Game Design', 'Physics'],
+    prerequisites: [],
+    url: 'https://www.udemy.com/course/godot-game-development-mini-degree/', rating: 4.6,
+    description: 'Open-source game engine for 2D and 3D games',
+  },
+
+  // ──────────────── BLOCKCHAIN & WEB3 ────────────────
+  {
+    id: 'web3-001', title: 'Blockchain Specialization', domain: 'Blockchain & Web3',
+    level: 'intermediate', duration: '60 hours', provider: 'Coursera / University at Buffalo',
+    skills: ['Blockchain', 'Ethereum', 'Solidity', 'Smart Contracts', 'DApps'],
+    prerequisites: ['Programming basics'],
+    url: 'https://www.coursera.org/specializations/blockchain', rating: 4.5,
+    description: 'Build decentralized applications on Ethereum',
+  },
+  {
+    id: 'web3-002', title: 'Ethereum and Solidity: The Complete Developer\'s Guide', domain: 'Blockchain & Web3',
+    level: 'intermediate', duration: '24 hours', provider: 'Udemy',
+    skills: ['Solidity', 'Ethereum', 'Web3.js', 'Smart Contracts'],
+    prerequisites: ['JavaScript'],
+    url: 'https://www.udemy.com/course/ethereum-and-solidity-the-complete-developers-guide/', rating: 4.6,
+    description: 'Build real-world Ethereum projects',
+  },
+
+  // ──────────────── MATHEMATICS ────────────────
+  {
+    id: 'math-001', title: 'Mathematics for Machine Learning Specialization', domain: 'Mathematics',
+    level: 'intermediate', duration: '100 hours', provider: 'Coursera / Imperial College London',
+    skills: ['Linear Algebra', 'Multivariate Calculus', 'PCA', 'Probability'],
+    prerequisites: ['Basic algebra'],
+    url: 'https://www.coursera.org/specializations/mathematics-machine-learning', rating: 4.6,
+    description: 'The math foundation every ML engineer needs',
+  },
+  {
+    id: 'math-002', title: 'Khan Academy – Statistics and Probability', domain: 'Mathematics',
+    level: 'beginner', duration: '100+ hours', provider: 'Khan Academy',
+    skills: ['Statistics', 'Probability', 'Distributions', 'Hypothesis Testing'],
+    prerequisites: [],
+    url: 'https://www.khanacademy.org/math/statistics-probability', rating: 4.9,
+    description: 'Free, mastery-based statistics curriculum',
+  },
+];
+
+export default courses;
