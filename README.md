@@ -22,46 +22,6 @@ A full-stack MERN application that delivers personalized learning experiences us
 - 📊 **Progress Dashboard** — Skill radar chart, phase progress bars, next actions
 - 🎯 **Progress Tracking** — Mark resources complete, rate them, see streak
 
-## Quick Start
-
-### Prerequisites
-- Node.js 18+
-- MongoDB running locally (or MongoDB Atlas URI)
-- A Gemini API key from [Google AI Studio](https://aistudio.google.com/app/apikey)
-
-### 1. Backend Setup
-
-```bash
-cd backend
-npm install
-
-# Create .env file
-cp .env.example .env
-# Edit .env and add your GEMINI_API_KEY
-
-npm run dev    # starts on http://localhost:5000
-```
-
-### 2. Frontend Setup
-
-```bash
-cd frontend
-npm install
-npm run dev    # starts on http://localhost:5173
-```
-
-### 3. Open the app
-
-Visit **http://localhost:5173** — enter your name and start chatting!
-
-## Environment Variables (backend/.env)
-
-```
-PORT=5000
-MONGODB_URI=mongodb://localhost:27017/learning_recommender
-GEMINI_API_KEY=your_key_here
-```
-
 ## Project Structure
 
 ```
@@ -108,18 +68,3 @@ miniproject/
 5. Click **"Why this?"** on any resource for AI explanation
 6. **Check off resources** as you complete them
 7. Visit the **Dashboard** to track your progress visually
-
-## API Endpoints
-
-| Method | Route | Description |
-|---|---|---|
-| POST | `/api/auth/login` | Login / create account |
-| GET | `/api/profile/:userId` | Get learner profile |
-| PUT | `/api/profile/:userId` | Update profile |
-| POST | `/api/chat` | Chat with Gemini AI |
-| POST | `/api/roadmap/generate` | Generate personalized roadmap |
-| GET | `/api/roadmap/:userId` | Get saved roadmap |
-| PUT | `/api/roadmap/:userId/progress` | Mark resource complete |
-| POST | `/api/roadmap/:userId/feedback` | Rate a resource |
-| POST | `/api/roadmap/explain` | Explain a recommendation |
-| GET | `/api/courses` | Browse course catalog |
