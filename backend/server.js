@@ -1,4 +1,4 @@
-import dns from "dns";
+﻿import dns from "dns";
 
 dns.setServers(["8.8.8.8", "8.8.4.4"]);
 
@@ -20,10 +20,7 @@ const PORT = process.env.PORT || 5000;
 
 app.use(
   cors({
-    origin: [
-      "http://localhost:5173",
-      "https://learningpath-gules.vercel.app",
-    ],
+    origin: ["http://localhost:5173", "https://learningpath-phi.vercel.app"],
     credentials: true,
   }),
 );
@@ -74,7 +71,7 @@ mongoose
     console.log("MongoDB connected to:", MONGO_URI);
 
     app.listen(PORT, () => {
-      console.log(`Server running on http://localhost:${PORT}`);
+      console.log(`Server running on port ${PORT}`);
     });
   })
   .catch((err) => {
