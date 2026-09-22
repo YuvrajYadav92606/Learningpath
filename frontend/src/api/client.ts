@@ -10,16 +10,14 @@ import type {
 } from '../types';
 
 const api = axios.create({
-  baseURL: '/api',
+  baseURL: `${import.meta.env.VITE_API_URL || 'http://localhost:5000'}/api`,
   headers: { 'Content-Type': 'application/json' },
-  timeout: 60000, // 60s for AI calls
+  timeout: 60000,
 });
 
-// ─── Auth ─────────────────────────────────────────────────────────────────────
 export const login = (name: string, email?: string) =>
   api.post<AuthResponse>('/auth/login', { name, email }).then((r) => r.data);
 
-// ─── Profile ──────────────────────────────────────────────────────────────────
 export const getProfile = (userId: string) =>
   api.get<{ profile: LearnerProfile }>(`/profile/${userId}`).then((r) => r.data.profile);
 
@@ -31,7 +29,6 @@ export const addSkill = (userId: string, name: string, level: number) =>
     .post<{ profile: LearnerProfile }>(`/profile/${userId}/skill`, { name, level })
     .then((r) => r.data.profile);
 
-// ─── Chat ─────────────────────────────────────────────────────────────────────
 export const sendChat = (userId: string, message: string, history: ConversationMessage[]) =>
   api
     .post<ChatResponse>('/chat', { userId, message, conversationHistory: history })
@@ -40,7 +37,6 @@ export const sendChat = (userId: string, message: string, history: ConversationM
 export const clearChatHistory = (userId: string) =>
   api.delete(`/chat/${userId}/history`).then((r) => r.data);
 
-// ─── Roadmap ──────────────────────────────────────────────────────────────────
 export const generateRoadmap = (userId: string, goal?: string) =>
   api
     .post<{ roadmap: LearningPath }>('/roadmap/generate', { userId, goal })
@@ -82,7 +78,6 @@ export const explainResource = (userId: string, resource: Resource) =>
     .post<{ explanation: string }>('/roadmap/explain', { userId, resource })
     .then((r) => r.data.explanation);
 
-// ─── Courses ──────────────────────────────────────────────────────────────────
 export const getCourses = (params?: { domain?: string; level?: string; search?: string }) =>
   api
     .get<{ courses: Course[]; total: number; domains: string[] }>('/courses', { params })
